@@ -1,0 +1,535 @@
+﻿React -  a JavaScript library for building user interfaces.(created by Facebook)
+         -  used to build single page applications.
+         - allows us to create reusable UI components.
+
+Create React App
+   - In order to learn and test React, you should set up a React Environment on your computer.
+   - The create-react-app is an officially supported way to create React applications.
+   -If you have NPM and Node.js installed, you can create a React application by first installing the create-react-app.
+
+Install create-react-app by running this command in your terminal:	"C:\Users\Your Name>npm install -g create-react-app"
+Run this command to create a React application named myfirstreact: "C:\Users\Your Name>npx create-react-app myfirstreact"
+Run this command to execute the React application myfirstreact: "C:\Users\Your Name\myfirstreact>npm start"
+A new browser window will pop up with your newly created React App! (localhost:3000)
+
+What You Should Already Know
+	- HTML
+	- CSS
+	- JavaScript
+	- ES6(ECMAScript 6)
+************************************************************************************************************************************
+ React Intro
+
+How does React Work?
+
+- React creates a VIRTUAL DOM in memory.
+- Instead of manipulating the browser's DOM directly, React creates a virtual DOM in memory, where it does all the necessary manipulating, 
+  before making the changes in the browser DOM.
+-React only changes what needs to be changed!
+-React finds out what changes have been made, and changes only what needs to be changed.
+
+React.JS History
+	-Current version of React.JS is V16.8.6 (March 2019).
+	-Initial Release to the Public (V0.3.0) was in July 2013.
+	-React.JS was first used in 2011 for Facebook's Newsfeed feature.
+	-Facebook Software Engineer, Jordan Walke, created it.
+	-The create-react-app version 2.0 package was released in October 2018.
+	-Create-react-app version 2.0 supports Babel 7, webpack 4, and Jest23.
+
+
+************************************************************************************************************************************
+
+React Get Started
+
+- To use React in production, you need NPM and Node.js .
+
+React Directly in HTML- he quickest way start learning React is to write React directly in your HTML files.
+
+eg.
+
+<!DOCTYPE html>
+<html>
+  <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  <body>
+  
+    <div id="mydiv"></div>
+
+    <script type="text/babel">
+      class Hello extends React.Component {
+        render() {
+          return <h1>Hello World!</h1>
+        }
+      }
+
+      ReactDOM.render(<Hello />, document.getElementById('mydiv'))
+    </script>
+  </body>
+</html>
+
+#This way of using React can be OK for testing purposes, but for production you will need to set up a React environment.
+
+Setting up a React Environment
+- If you have NPM and Node.js installed, you can create a React application by first installing the create-react-app.
+- Install create-react-app by running this command in your terminal: "C:\Users\Your Name>npm install -g create-react-app"
+- Run this command to create a React application named myfirstreact: "C:\Users\Your Name>npx create-react-app myfirstreact"
+
+Run the React Application=> move to the project directory ("C:\Users\Your Name\myfirstreact>npm start")
+
+Modify the React Application
+
+- /myfirstreact/src/App.js:
+- Try changing the HTML content and save the file.
+#Notice that the changes is visible immediately after you save the file, you do not have to reload the browser!
+
+************************************************************************************************************************************
+What is ES6?
+-ES6 stands for ECMAScript 6.
+-ECMAScript was created to standardize JavaScript, and ES6 is the 6th version of ECMAScript, it was published in 2015, and is also known as ECMAScript 2015.
+
+Why Should I Learn ES6?
+React uses ES6, and you should be familiar with some of the new features like:
+-Classes
+-Arrow Functions
+-Variables (let, const, var)
+
+
+Classes
+-ES6 introduced classes.
+-A class is a type of function, but instead of using the keyword function to initiate it, we use the keyword class, and the properties are assigned inside a constructor() method.
+
+simple class constructor
+
+class Car{
+         constructor(name){
+	 	this.brand=name;
+          }
+}
+
+Now, can create objects using the Car class:
+ create an object called "mycar" based on the Car class:
+
+class Car{
+         constructor(name){
+	 	this.brand=name;
+          }
+}
+myCar = new Car("Ford");
+#Note: The constructor function is called automatically when the object is initialized.
+
+Class Inheritance
+-To create a class inheritance, use the extends keyword.
+
+Arrow Functions => were introduced in ES6.
+
+eg.
+hello=function(){
+	return "Hello World!";
+}
+
+With Arrow Function , 
+
+hello =()=>{
+ 	return "Hello World!";
+}
+
+It gets shorter! If the function has only one statement, and the statement returns a value, you can remove the brackets and the return keyword:
+
+hello =()=>"Hello World!";  #this works only if the function has only one statemet.
+
+If you have parameters, you pass them inside the parentheses:
+
+Arrow Function With Parameters:
+
+hello=(val)=>"hello"+Val;
+
+What about "this"?
+
+What About this?
+-The handling of this is also different in arrow functions compared to regular functions.
+-In short, with arrow functions there are no binding of this.
+-In regular functions the this keyword represented the object that called the function, which could be the window, the document, a button or whatever.
+-With arrow functions, the this keyword always represents the object that defined the arrow function.
+
+Variables
+-Before ES6 there were only one way of definig your variables: with the var keyword .If you did not define them, they would be assigned to the global object. Unless you were in strict mode, then you would get an error if your variables were undefined.
+ Now, with ES6, there are three ways of defining your variables: var, let, and const.
+
+var x=5.6;
+  - if you use var outside of a function, it belongs to the global scope.
+  - if you use var inside of a function, it belongs to that function.
+  - if you use var inside of a block, i.e, a for loop, the variable is still available outside of that block.
+  #var has function scope , not a block scope.
+
+let x=5.6;
+ #let has a block scope.
+  - let is the block scoped version of var, and is limited to the block (or expression) where it is defined.
+  - if you use let inside of a block, i.e, a for loop, the variable is only available inside of that loop.
+
+const x=5.6;
+  - const is a variable that once it has been created, its value can never change.
+  #Const has a block scope.
+******************************************************************************************************************************************************************************************************************************
+React Render HTML
+
+-React renders HTML to the web page by using a function called ReactDOM.render().
+
+The Render Function
+
+-The ReactDOM.render() function takes two arguments, HTML code and an HTML element.
+-The purpose of the function is to display the specified HTML code inside the specified HTML element.
+
+The Root Node
+-The root node is the HTML element where you want to display the result.
+-It is like a container for content managed by React.
+-It does NOT have to be a <div> element and it does NOT have to have the id= 'root';
+
+**********************************************************************************************************************************
+React JSX
+What is JSX?
+        -JSX stands for JavaScript XML.
+        - JSX allows us to write HTML in React.
+        - JSX makes it easier to write and add HTML in React.
+Coding JSX
+         - place them in the DOM without any createElement() and /or appendChild() method.
+         -JSX converts HTML tags into react elements.
+         -You are not required to use JSX,but JSX makes it easier to write React applications.
+-JSX is an extension of the JavaScript language based on ES6, and is translated into regular JavaScript at runtime.
+
+Expressions in JSX
+-With JSX you can write expressions inside curly braces{}.
+-The expression can be a React variable, or property, or any other valid JavaScript expression.JSX will execute the expression and return the result:
+
+Inserting a Large Block of HTML
+-To write HTML on multiple lines, put the HTML inside parentheses:
+eg.ul tag
+const myelement = (
+  <ul>
+    <li>Apples</li>
+    <li>Bananas</li>
+    <li>Cherries</li>
+  </ul>
+);
+
+One Top Level Element
+-The HTML code must be wrapped in ONE top level element.
+So if  you like to write two headers, you must put them inside a parent element, like a div element.
+
+eg. const myelement = (
+  <div>
+    <h1>I am a Header.</h1>
+    <h1>I am a Header too.</h1>
+  </div>
+); #JSX will throw an error if the HTML is not correct, or if the HTML misses a parent element.
+
+Elements Must be Closed
+-JSX folllows XML rules, and therefore HTML elements must be properly closed.
+eg. close empty elements with />
+	const myelement = <input type= "text"/>; #JSX will throw an error if the HTML is not properly closed.
+
+**************************************************************************************************************************************
+React Components
+
+-Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions,
+ but work in isolation and returns HTML via a render function.
+-Components come in two types, Class components and Function components
+
+Create a Class Component
+
+-When creating a React component, the component's name must start with an upper case letter.
+ The component has to include the extends React.Component statement,
+ this statement creates an inheritance to React.Component, and gives your component access to React.Component's functions.
+ The component also requires a render() method, this method returns HTML.
+
+Create a Function Component
+-A Function component also returns HTML, and behaves pretty much the same way as a Class component, but Class components have some additions
+
+Component Constructor
+-If there is a constructor() function in your component, this function will be called when the component gets initiated.
+-The constructor function is where you initiate the component's properties.
+-In React, component properties should be kept in an object called state.
+**********************************************************************************************************************************
+Props
+-Another way of handling component properties is by using props.
+-Props are like function arguments, and you send them into the component as attributes.
+
+
+React Props-are arguments passed into React components and passed to components via HTML attributes.
+	   - Like function arguments in JavaScript and attributes in HTML
+Pass Data   - are also how you pass data from one component to another, as parameters.
+
+#React Props are read-only! You will get an error if you try to change their value.
+
+**********************************************************************************************************************************
+React State
+-React components has a built-in state object.
+-The state object is where you store property values that belongs to the component.
+-When the state object changes, the component re-renders.
+
+Changing the State Object
+-To change a value in the state object, use the this.setState() method.
+-When a value in the state object changes, the component will re-render, meaning that the output will change according to the new value(s).
+
+**********************************************************************************************************************************
+
+Lifecycle of Components- Each component in React has a lifecycle which you can monitor and manipulate during its three main phases.
+		         The three phases are: Mounting, Updating, and Unmounting.
+
+Mounting
+Mounting means putting elements into the DOM.
+
+React has four built-in methods that gets called, in this order, when mounting a component:=> 1.constructor()
+										2.getDerivedStateFromProps()
+										3.render()
+										4.componentDidMount()
+The render() method is required and will always be called, the others are optional and will be called if you define them.
+
+getDerivedStateFromProps
+-The getDerivedStateFromProps() method is called right before rendering the element(s) in the DOM.
+-This is the natural place to set the state object based on the initial props.
+-It takes state as an argument, and returns an object with changes to the state.
+
+
+render() method=>require, and is the method that actual outputs HTML to the DOM
+
+componentDidMount () method=> called after the component is rendered.
+
+Updating
+
+The next phase in the lifecycle is when a component is updated.
+
+A component is updated whenever there is a change in the component's state or props.
+
+React has five built-in methods that gets called, in this order, when a component is updated:
+1.getDerivedStateFromProps()
+2.shouldComponentUpdate()
+3.render()
+4.getSnapshotBeforeUpdate()
+5.componentDidUpdate()
+
+shouldComponentUpdate
+-In the shouldComponentUpdate() method you can return a Boolean value that specifies whether React should continue with the rendering or not.
+-The default value is true.
+
+getSnapshotBeforeUpdate
+-In the getSnapshotBeforeUpdate() method you have access to the props and state before the update, meaning that even after the update, you can check what the values were before the update.
+-If the getSnapshotBeforeUpdate() method is present, you should also include the componentDidUpdate() method, otherwise you will get an error.
+-The example below might seem complicated, but all it does is this:
+-When the component is mounting it is rendered with the favorite color "red".
+-When the component has been mounted, a timer changes the state, and after one second, the favorite color becomes "yellow".
+-This action triggers the update phase, and since this component has a getSnapshotBeforeUpdate() method, this method is executed, and writes a message to the empty DIV1 element.
+-Then the componentDidUpdate() method is executed and writes a message in the empty DIV2 element:
+
+
+Example:
+Use the getSnapshotBeforeUpdate() method to find out what the state object looked like before the update:
+
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {favoritecolor: "red"};
+  }
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({favoritecolor: "yellow"})
+    }, 1000)
+  }
+  getSnapshotBeforeUpdate(prevProps, prevState) {
+    document.getElementById("div1").innerHTML =
+    "Before the update, the favorite was " + prevState.favoritecolor;
+  }
+  componentDidUpdate() {
+    document.getElementById("div2").innerHTML =
+    "The updated favorite is " + this.state.favoritecolor;
+  }
+  render() {
+    return (
+      <div>
+        <h1>My Favorite Color is {this.state.favoritecolor}</h1>
+        <div id="div1"></div>
+        <div id="div2"></div>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<Header />, document.getElementById('root'));
+
+componentDidUpdate
+-The componentDidUpdate method is called after the component is updated in the DOM.
+-The example below might seem complicated, but all it does is this:
+-When the component is mounting it is rendered with the favorite color "red".
+-When the component has been mounted, a timer changes the state, and the color becomes "yellow".
+-This action triggers the update phase, and since this component has a componentDidUpdate method, this method is executed and writes a message in the empty DIV element:
+
+Unmounting
+-The next phase in the lifecycle is when a component is removed from the DOM, or unmounting as React likes to call it.
+-React has only one built-in method that gets called when a component is unmounted:
+ .componentWillUnmount()
+
+componentWillUnmount
+-The componentWillUnmount method is called when the component is about to be removed from the DOM.
+**************************************************************************************************************************************
+React Events
+-Just like HTML, React can perform actions based on user events.
+-React has the same events as HTML: click, change, mouseover etc.
+
+Adding Events
+-React events are written in camelCase syntax:
+	onClick instead of onclick.
+
+-React event handlers are written inside curly braces:
+	onClick={shoot}  instead of onClick="shoot()".
+
+Event Handlers
+-A good practice is to put the event handler as a method in the component class:
+
+class Football extends React.Component {
+  shoot() {
+    alert("Great Shot!");
+  }
+  render() {
+    return (
+      <button onClick={this.shoot}>Take the shot!</button>
+    );
+  }
+}
+
+ReactDOM.render(<Football />, document.getElementById('root'));
+
+Bind this
+-For methods in React, the this keyword should represent the component that owns the method.
+-That is why you should use arrow functions. With arrow functions, this will always represent the object that defined the arrow function.
+
+class Football extends React.Component {
+  shoot = () => {
+    alert(this); //output [object object]
+    /*
+    The 'this' keyword refers to the component object
+    */
+  }
+  render() {
+    return (
+      <button onClick={this.shoot}>Take the shot!</button>
+    );
+  }
+}
+
+ReactDOM.render(<Football />, document.getElementById('root'));
+
+Why Arrow Functions?
+-In class components, the this keyword is not defined by default, so with regular functions the this keyword represents the object that called the method, 
+ which can be the global window object, a HTML button, or whatever.
+-If you must use regular functions instead of arrow functions you have to bind this to the component instance using the bind() method:
+
+class Football extends React.Component {
+  constructor(props) {
+    super(props)
+    this.shoot = this.shoot.bind(this)
+  }
+  shoot() {
+    alert(this);
+    /*
+    Thanks to the binding in the constructor function,
+    the 'this' keyword now refers to the component object
+    */
+  }
+  render() {
+    return (
+      <button onClick={this.shoot}>Take the shot!</button>
+    );
+  }
+}
+
+ReactDOM.render(<Football />, document.getElementById('root'));
+
+
+
+#Without the binding, the this keyword would return undefined.
+
+
+Passing Arguments: if you want to send parameters into an event handler, you have two options:
+		  1.Make an anonymous arrow function:
+			OR
+		  2. Bind the event handler to this.(Note that the first argument has to be this.)
+
+*************************************************************************************************************************************************
+
+React Forms
+
+-Just like in HTML, React uses forms to allow users to interact with the web page.
+Adding Forms in React(You add a form with React like any other element)
+
+
+Handling Forms
+-Handling forms is about how you handle the data when it changes value or gets submitted.
+-In HTML, form data is usually handled by the DOM.
+-In React, form data is usually handled by the components.
+-When the data is handled by the components, all the data is stored in the component state.
+
+Submitting Forms(You can control the submit action by adding an event handler in the onSubmit attribute:)
+
+Textarea
+-The textarea element in React is slightly different from ordinary HTML.
+-In HTML the value of a textarea was the text between the start tag <textarea> and the end tag </textarea>, 
+ in React the value of a textarea is placed in a value attribute:
+example syntax=><textarea value={this.state.description} />
+
+Select
+
+-A drop down list, or a select box, in React is also a bit different from HTML.
+-in HTML, the selected value in the drop down list was defined with the selected attribute:
+-In React, the selected value is defined with a value attribute on the select tag:
+
+*************************************************************************************************************************************
+
+React CSS
+Inline Styling-To style an element with the inline style attribute, the value must be a JavaScript object:
+		eg. <h1 style={{color: "red"}}>Hello Style!</h1>
+
+
+camelCased Property Names
+-Since the inline CSS is written in a JavaScript object, properties with two names, like background-color, must be written with camel case syntax:
+ eg.<h1 style={{backgroundColor: "lightblue"}}>Hello Style!</h1>
+
+CSS Modules
+-Another way of adding styles to your application is to use CSS Modules.
+-CSS Modules are convenient for components that are placed in separate files.
+-The CSS inside a module is available only for the component that imported it, and you do not have to worry about name conflicts.
+*************************************************************************************************************************************
+React Sass
+
+What is Sass
+
+-Sass is a CSS pre-processor.
+-Sass files are executed on the server and sends CSS to the browser.
+
+Can I use Sass?
+-If you use the create-react-app in your project, you can easily install and use Sass in your React projects.(npm install node-sass)
+
+Create a Sass file
+-create a sass file the same way as you create CSS files, but sass files have the file extension .scss
+
+
+*************************************************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

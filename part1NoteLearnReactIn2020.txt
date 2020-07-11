@@ -1,0 +1,58 @@
+﻿01-Introduction-Learn React in 2020
+
+What is react?
+         /*-React is a declarative, efficient, and flexible open-source JavaScript library for building user interfaces.( specially for single-page applications)
+         -It's used for handling the view layer for web and mobile apps.
+         -React also allows us to create reusable UI components.*/(from google)
+
+What does react app made of?
+         -React is basically made of components so there are different components exactly in HTML like you do a div.
+
+Why use component?
+        -Resuable chunks of code 
+        -Good structure 
+	components are good because they give you structure and they allow you to think about you want in terms of units and these units (easily testable,
+              shareable, debuggable)
+       -self-contained code
+       -Think in terms of "responsibilities"
+
+
+React Component
+
+	class components				                     |				 functional components
+
+							        |
+	class Welcome extends React.Compoent{                               |                              function Welcome(props){
+		render(){                                                              |                                              
+		       return <h1>Hello ,{this.props.name}</h1>;       |                                                  return <h1>Hello ,{props.name}</h1>;
+		}
+	}                                                                                       |                              }
+	
+	-have to declare it using Keywords                                         |                              -make readable codes
+	-render method inside that class                                            |                              -like a normal function
+	-can ony use state with only in class components.                    |
+
+
+Type of data in React                                                                        
+
+            Props
+	     -A simple variable
+	     -Used for passing between components
+	     -Think functional arguments
+
+            State
+	    -A variable that can be updated
+	    -Used to implement "Reactiviy"
+	    -Used to trigger a Re-render
+	    -Responsible for all the interactivity of the app
+	    (from google
+		React has another special built-in object called state,Which allows components to create and manage their own data.
+                           So unlike props, 
+                                      components  cannot pass data wiht state,
+		 but they can create and manage . State should never be updated explicitly)
+
+Data Flow in React	(is a quite strict , readable and usable code)
+
+	One-way direction data flow - is a pattern that works nicely with React.
+				-components don't modify the data that they receive.
+			  	- only listen for changes of this data and may be provide new value but they don't update the actual data.

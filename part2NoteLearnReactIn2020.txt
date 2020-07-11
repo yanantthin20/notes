@@ -1,0 +1,27 @@
+﻿02- VS Code Setup-Learn React in 2020
+
+	Visual studio code is a code editor redefinded and optimized for building and debugging modern web and cloud applications.(built on Microsoft)
+
+In video,First=>install VS code
+      	     =>setup Fira code
+                  =>have to restart the VS
+
+Theme
+Material Icon Theme-for your folder icons and HTML icons (really cool to show you what type of file you are working with)
+Night Owl-night mode 
+Simple react snippets
+
+-In order to start with react, there is a very easy way to start developing for react which is called creat react app(npm package that is developed by fb)
+
+-React works using babel and JSX and there's a lot of things happening in the back end
+
+=>$npm install -g create-react-app (g means global package for all your project
+
+   Once you do that then you can actually creat a react app which will give you some kind of scaffolded react app
+   that includes all the things that you need to start developing for react)
+
+=>npm create-react-app (npm start=> package.json,default localhost:3000)
+
+-React has a lot of dependencies it's using babel to compile and it's using es lint to just give you like the standard stuff that you need for create react app
+
+
