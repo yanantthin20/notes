@@ -1,0 +1,31 @@
+﻿Co-location
+
+Having all the routing together breaks the co-location principle. Co-location is broadly accepted as a best practice by most of the React community. 
+The idea of co-locating is that you should group things by concern, and not by implementation. Example, instead of having all the CSS in a folder, 
+we co-locate the CSS with the components that are concerned about a specific CSS. Instead of placing all the GraphQL queries in the same folder, 
+we co-locate them with the components that are concered about it. Therefore, the routing should not be an exception.
+Other frameworks like Rails, Express, Ember, and Angular follow this same approach like the .NET and PHP examples shown above. 
+Why would we group all the routes the same way?
+Co-locating code makes it easier to mantain the code base of the application.
+
+
+Static routing
+React Router before version 4 followed the same principle as the .NET and PHP implementations shown above. 
+It kept the mapping between a path and a component in a separate file. 
+
+
+Dynamic routing in React Router version 4 -  it takes place as the app is rendering, not in a separate configuration file.
+
+
+Pro-tip
+If you want to successfully leverage React Router 4 and the declarative approach that React embraces, you should implement dynamic routing in React.
+A common mistake we see in developers that are new to React, but experienced in other frameworks and tools, is that
+they try to bring the mental models they know even when those models don’t fit properly.
+In some cases (not always) those models are not the right way in React; routing is one of those cases. 
+If you find yourself placing all your routes in the same place (e.g. a routing config file) in a React app, 
+consider co-locating your Route components in the tree where it naturally falls into place.
+
+
+
+References-(youtube link=>https://medium.com/leanjs/declarative-routing-with-react-router-v4-7419c198e93f)
+

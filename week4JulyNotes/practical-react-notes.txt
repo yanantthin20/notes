@@ -1,0 +1,61 @@
+﻿Practical React
+
+How to install the React.js on your computer=>part1  
+           - npx create-react-app practical-app
+	npm start=>localhost:3000
+
+How to create React.js Components  =>part2
+
+-React is all about building components and putting components together to build bigger things
+-JSX, looks a little bit like HTML and it kind of it's a mix between HTML and then also being able to do JS stuff inside that and display variables.
+-we can create many components as we want and we can put everyone in the render function and we can build bigger components by putting those components  
+ together
+
+Passing Data to component in React.js =>Part-3
+- this.props is an object,
+-<h1 className="App-title">this.props.title</h1>
+-In above tag, this.props.title is a text not variable. we can wrap this in curly braces lik {this.props.title}
+-<Header title ="Hello" num={5}/>(String don't need curyl braces)
+-Everything else you want to pass into component you have to wrap and curly braces
+-Objects are not valid as a React child
+-So, {JSON.stringify{this.props.myOjb}}(JSON.stringify takes an object and turns into a string)
+-props are just passing the data to your custom components
+
+Importing Components in React.js =>Part-4
+-a good rule of thumb is you want to have about one component in each file
+-Whenever we are using JSX, we need to import react
+-to be able to import in another file, you need to export
+-export default, you can only export one thing
+-if I want to export more than one thing from a file, I'll have to use a different type of export which is called a named export
+-When export, if we don't use default , we must use curly braces and use the name of the class that we gave(can use const instead of default)
+
+State in React.js => Part-5
+-Whenever you use the constructor , you need to say super on the props 
+-Regular function need to bind to access state property , but arrow function don't need
+-If you want to update state property, use setState()
+-Whenever we call this.setState(), it 's going to do two things
+-First, it's going to set the new state
+-Second, it's going to call render function.
+
+How setState works in React.js =>Part-6
+-this.setState() is asynchronous so what is means is the value of the state does not immediately change after calling this function .
+
+
+Form components in React.js => Part-9
+-<input/> => uncontrolled field because we're not storing what the user typed inside of react
+-controlled field => you do store with the user typed inside of react because this allows you to  add some stuff like validation.
+
+Fetch Data From on API in React.js => Part-12
+-fetch() is going to allow us to make the HP request to get the data.
+
+Deploying Create React App to Surge and Netlify => Part-16
+First- npm run build
+-Two different techniques- 1. using a site called surge, it 's free and allows you to deploy to your front-end application
+			(need to run this command 
+				-npm install --global surge
+				-surge)
+		          2. netlify (https://app.netlify.com/start) (from github)
+
+
+References-(youtube link =>https://www.youtube.com/watch?v=p6c7QA9ofvI&list=PLN3n1USn4xlntqksY83W3997mmQPrUmqM)
+
