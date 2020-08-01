@@ -1,0 +1,112 @@
+﻿Episode #1 : Introduction to ecommerce |What to ecommerce & Growing a online Busine
+
+-What happends when someone comes to your site.
+(they browse products, browse aisles or categories , they add products to the cart , the pay for those products through a mobile device , a desktop device ,social
+media channels)
+
+Search  &  Browsing Products
+
+1.Site Search        
+2.Merchandising             => Merchandising the ability to merchandise your products this would be product displays, this would be promotional information
+3.Categorization(Information Architecture)
+
+Shopping Cart
+1.Adding products to your "digital " shopping cart
+2.Different shopping carts
+	a.ZenCart/ WooCommerce
+	b.Shopify /BigCommerce /Volusion =>  monthly fee
+	c. Magento =>this is probably the largest platform out h=there in terms of community popularity & just overall number of business on this platform
+	d.Kibo / Demandware /Hybris       =>higher-end or more enterprise level platforms
+
+
+Checkout
+1.Account Creation 
+2.Ability to accept payments online
+3.Shipping information /selection
+4.Tax calculation
+5.Order confirmation
+
+Fulfillment Process
+1.Oorder Processing
+2.Shipping /Carrier pick up
+3.RMA (Return Merchandise Authorization)
+
+
+Connecting your Users
+1.Devices
+	a.Desktop
+	b.Mobile
+	c.Tablet
+2.Social media
+3.Rewards programs(referrals)
+4.Email marketing
+5.Paid search marketing
+
+************************************************************************************************************************************
+
+Episode #2: Gathering Requirements for your eCommerce Website | Learn to grow your online business
+
+What is your annual revenue?
+-knowing revenue is gonna be a key part
+
+Are you primarily B2B or B2C
+-Do you have a wholesale element to your site?
+-Do you require unique pricing features based on custom groups?
+-Do you offer custom payment options based on the user (POs, Net 30,etc)
+
+Do you list your products on any marketplaces?
+Examples : 
+	.Amazon
+	.eBay
+	.Google Shopping
+	.JET
+	.Facebook
+	.Etsy
+	.Walmart
+	.Others.....
+
+User Experience and Design Needs
+.Research (user personas, heuristic anaylsis, testing , competitive analysis)
+.Site architecture (e.g. Site Map , categorization)
+.Wireframes (the skeleton  or layout of the site)
+.Design (branding , tone and voice , website design , email templates , etc)
+
+What features do you need?
+.Catalog Management
+.Content Management
+.Cart/Checkout
+.Customer Experience
+.Order Management
+.Global and multi-stores
+.Analytic and Reporting
+.Personalization
+.Architecture and security
+
+What 3rd party integrations do you have?
+.Customer Relationship Management(CRM)
+.Enterprise Resource Planning (ERP)
+.Accounting
+.Order Management Systems(OMS)
+.Marketplaces
+.Email Marketing
+.Payment Processors
+.Vendor Feeds
+.Others...
+
+What's your budget?
+.Do not max your budget out on just the rebuild
+.Plan to optimize the site once the site is launch
+.Do you need to grow the site?
+
+Know your goals!
+Why are you looking to rebuild?
+What metrics are you focusing on?
+What % growth are you looking for in the next 6 months, 1year ,2 years , etc.
+DO NOT TRY TO MATCH YOUR COMPETITIORS! -Use htem for inspiration but don't try to become them
+
+What 's  next?
+Narrow your focus....
+	1.Map your goals and buget
+	2. Select a platform
+	3. Find your partner(s)
+
